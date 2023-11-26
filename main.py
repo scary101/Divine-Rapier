@@ -16,7 +16,7 @@ async def start():
     while run != False:
         a = input("Добро пожаловать на шоу Угадай Песню"
                   "\n Чтобы начать введите Да, если хотите выйте Нет")
-        if a == "Начать":
+        if a == "да":
             run = False
         elif a == 'Нет':
             exit()
@@ -38,6 +38,7 @@ async def play_music():
         guess = input("Угадайте название песни: ")
         if guess.lower() == answer[rand].lower():
             correct_guess = True
+            print("Вы угадали!")
         else:
             print("Попробуйте еще раз!")
 
@@ -48,5 +49,11 @@ async def play_music():
 async def main():
     await play_music()
 
-
-asyncio.run(main())
+run = True
+while run != False:
+    asyncio.run(main())
+    b = input("Хотите попробовать еще раз? Да или Нет")
+    if b == "Да":
+        pass
+    else:
+        break
