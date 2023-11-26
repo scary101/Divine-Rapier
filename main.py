@@ -16,9 +16,9 @@ async def start():
     while run != False:
         a = input("Добро пожаловать на шоу Угадай Песню"
                   "\n Чтобы начать введите Да, если хотите выйте Нет")
-        if a == "да":
+        if a.lower()  == "да":
             run = False
-        elif a == 'Нет':
+        elif a.lower()  == 'Нет':
             exit()
         else:
             pass
