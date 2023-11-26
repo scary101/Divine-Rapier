@@ -2,13 +2,6 @@ import os
 import pygame
 import asyncio
 import random
-rand = random.randint(0, 5)
-
-
-folder_path = 'C:\\Users\\user\\PycharmProjects\\pythonProject8\\music'
-file_names = os.listdir(folder_path)
-file_path = folder_path + '\\' + file_names[rand]
-answer = ["Bad Gyu", "Love The Way You Lie", "За деньги ДА", "In the end", "Numb", "Мама Люба"]
 
 async def start():
     run = True
