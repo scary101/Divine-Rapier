@@ -9,7 +9,6 @@ folder_path = 'C:\\Users\\user\\PycharmProjects\\pythonProject8\\music'
 file_names = os.listdir(folder_path)
 file_path = folder_path + '\\' + file_names[rand]
 answer = ["Bad Gyu", "Love The Way You Lie", "За деньги ДА", "In the end", "Numb", "Мама Люба"]
-print(rand)
 
 async def start():
     run = True
@@ -51,6 +50,11 @@ async def main():
 
 run = True
 while run != False:
+    rand = random.randint(0, 5)
+    folder_path = 'C:\\Users\\user\\PycharmProjects\\pythonProject8\\music'
+    file_names = os.listdir(folder_path)
+    file_path = folder_path + '\\' + file_names[rand]
+    answer = ["Bad Gyu", "Love The Way You Lie", "За деньги ДА", "In the end", "Numb", "Мама Люба"]
     asyncio.run(main())
     b = input("Хотите попробовать еще раз? Да или Нет")
     if b == "Да":
